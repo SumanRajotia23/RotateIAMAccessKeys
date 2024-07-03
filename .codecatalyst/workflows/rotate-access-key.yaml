@@ -26,7 +26,7 @@ Actions:
           Role: CodeCatalystWorkflowDevelopmentRole-CodeCatalystWorkspace
     Configuration:
       Steps:
-      - Run: cd sandbox2/iam
+      - Run: cd IAMAccesskey/iam
       - Run: ./delete-access-key.sh
     Compute:
       Type: EC2
@@ -44,7 +44,7 @@ Actions:
       Artifacts:
         - Name: ACCESSKEY
           Files:
-            - sandbox2/iam/access-key.csv
+            - IAMAccesskey/iam/access-key.csv
     Environment:
       Name: sandbox
       Connections:
@@ -52,7 +52,7 @@ Actions:
           Role: CodeCatalystWorkflowDevelopmentRole-CodeCatalystWorkspace
     Configuration:
       Steps:
-      - Run: cd sandbox2/iam
+      - Run: cd IAMAccesskey/iam
       - Run: ./create-access-key.sh
     Compute:
       Type: EC2
