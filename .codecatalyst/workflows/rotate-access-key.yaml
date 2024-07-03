@@ -6,6 +6,9 @@ Triggers:
     Expression: "30 12 ? * THU *"
     Branches:
       - master
+  - Type: PUSH
+    Branches:
+      - main
 
 Actions:
   delete-access-key:
