@@ -28,7 +28,7 @@ Actions:
       Steps:
         - Run: cd IAMAccesskey/iam
         - Run: chmod +x create-access-key.sh
-        - Run: sudo ./delete-access-key.sh
+        - Run: delete-access-key.sh
     Compute:
       Type: EC2
   create-access-key:
@@ -55,6 +55,6 @@ Actions:
       Steps:
         - Run: cd IAMAccesskey/iam
         - Run: chmod +x create-access-key.sh
-        - Run: sudo ./create-access-key.sh
+        - Run: sudo create-access-key.sh
     Compute:
       Type: EC2
