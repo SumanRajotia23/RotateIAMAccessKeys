@@ -26,8 +26,8 @@ Actions:
       Name: sandbox
     Configuration:
       Steps:
-        - Run: cd IAMAccesskey/iam
-        - Run: echo "Hi"
+        - Run: cd IAMAccesskey/iam"
+        - Run: chmod +x delete-access-key.sh
         - Run: ./delete-access-key.sh
     Compute:
       Type: EC2
