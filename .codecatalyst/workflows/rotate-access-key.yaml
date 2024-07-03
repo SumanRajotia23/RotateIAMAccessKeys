@@ -18,16 +18,17 @@ Actions:
         - WorkflowSource
       Variables:
         - Name: IAM_USER
-          Value: "tf-admin"
+          Value: tf-admin
     Environment:
-      Name: sandbox
       Connections:
-        - Name: 118712586080
-          Role: CodeCatalystWorkflowDevelopmentRole-CodeCatalystWorkspace
+        - Role: CodeCatalystWorkflowDevelopmentRole-CodeCatalystWorkspace
+          Name: "118712586080"
+      Name: sandbox
     Configuration:
       Steps:
-      - Run: cd IAMAccesskey/iam
-      - Run: ./delete-access-key.sh
+        - Run: cd IAMAccesskey/iam
+        - Run: echo "Hi"
+        - Run: ./delete-access-key.sh
     Compute:
       Type: EC2
   create-access-key:
@@ -52,7 +53,7 @@ Actions:
           Role: CodeCatalystWorkflowDevelopmentRole-CodeCatalystWorkspace
     Configuration:
       Steps:
-      - Run: cd IAMAccesskey/iam
-      - Run: ./create-access-key.sh
+        - Run: cd IAMAccesskey/iam
+        - Run: ./create-access-key.sh
     Compute:
       Type: EC2
