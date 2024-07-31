@@ -18,7 +18,7 @@ Actions:
         - WorkflowSource
       Variables:
         - Name: IAM_USER
-          Value: suman-cli
+          Value: tf-admin
     Environment:
       Connections:
         - Role: CodeCatalystWorkflowDevelopmentRole-CodeCatalystWorkspace
