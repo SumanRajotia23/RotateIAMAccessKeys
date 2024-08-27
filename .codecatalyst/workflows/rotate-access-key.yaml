@@ -3,7 +3,7 @@ SchemaVersion: "1.0"
 
 Triggers:
   - Type: SCHEDULE
-    Expression: "30 12 ? * THU *"
+    #Expression: "30 12 ? * THU *"
     Branches:
       - master
   - Type: PUSH
